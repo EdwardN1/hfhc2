@@ -5,7 +5,7 @@
 function ritz_acf_google_map_api($api)
 {
 
-	$api['key'] = 'AIzaSyBxPrxmkuPdY0biO5r7F7Y3gqrbTxa3nIk';
+	$api['key'] = '';
 
 	return $api;
 
