@@ -1,0 +1,117 @@
+.show-on-accordion {
+  display: none;
+}
+.off-canvas {
+  .hide-on-accordion {
+    display: none;
+  }
+  .show-on-accordion {
+    display: list-item;
+  }
+  background: $blue;
+
+  .close-menu {
+    background-color: $mobile-blue;
+
+    .close-button {
+      font-size: 16px;
+      color: $white;
+      width: 100%;
+      line-height: 45px;
+      text-align: center;
+      position: relative;
+      display: block;
+      right: auto;
+      top: auto;
+      left: auto;
+      bottom: auto;
+
+      &:after {
+        content: "X";
+        position: absolute;
+        right: 0.3em;
+        top: 0;
+        font-size: 30px;
+        line-height: 45px;
+      }
+    }
+  }
+
+  .menu, .accordion-menu {
+    > li {
+      > a {
+        font-size: 16px;
+        color: $white;
+        width: 100%;
+        line-height: 45px;
+        text-align: center;
+        background-color: $blue;
+        padding: 0;
+        /*border-bottom: 1px solid $medium-blue;*/
+        position: relative;
+        display: block;
+
+        &:before {
+          position: absolute;
+          left: 0.3em;
+          right: 0.3em;
+          height: 1px;
+          bottom: 0;
+          background-color: $medium-blue;
+          content: " ";
+          opacity: 0.5;
+        }
+
+        &:after {
+          content: " ";
+          position: absolute;
+          right: 0.3em;
+          top: 0;
+          height: 45px;
+          width: 25px;
+          background-image: url("../images/menu-arrow-right.png");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+
+      &.is-accordion-submenu-parent:not(.has-submenu-toggle) {
+        > a {
+          background-color: #5dc9e1;
+          &:after {
+            content: " ";
+            position: absolute;
+            right: 0.3em;
+            top: 0;
+            height: 45px;
+            width: 25px;
+            border: none;
+            margin: 0;
+            background-image: url("../images/menu-arrow-down.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+
+      .is-accordion-submenu {
+        > li {
+          > a {
+            color: $body-font-color;
+            background-color: $white;
+            &:before {
+              background-color: $body-font-color;
+            }
+            &:after {
+              background-image: url("../images/submenu-arrow-right.png");
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}

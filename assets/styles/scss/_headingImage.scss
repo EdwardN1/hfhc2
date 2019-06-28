@@ -1,0 +1,305 @@
+.heading-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  //max-height: 416px;
+  line-height: 1.2;
+  background-position: center right;
+  height: 45vw;
+  position: relative;
+  font-size: 26px;
+
+  p {
+    font-size: 20px;
+    color: $white;
+    margin-bottom: 2.5em;
+    font-weight: bold;
+    @include breakpoint(medium) {
+      font-size: 20px;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 20px;
+      padding-right: 30%;
+    }
+    line-height: 1.25;
+  }
+
+  h1, h2 {
+    font-size: 30px;
+    color: $white;
+    font-weight: normal;
+    line-height: 1.25;
+    letter-spacing: 2px;
+    margin-bottom: 0.75em;
+    font-weight: 900;
+    @include breakpoint(medium) {
+      font-size: 30px;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 40px;
+    }
+  }
+
+  &.shadow {
+    p, h1, h2 {
+      text-shadow: 1px 1px 2px $grey;
+    }
+    .round-button {
+      -webkit-box-shadow: 3px 3px 6px 0px rgba(125,125,125,0.47);
+      box-shadow: 3px 3px 6px 0px rgba(125,125,125,0.47);
+    }
+  }
+
+  &.dark {
+    p, h1, h2 {
+      color: $body-font-color;
+    }
+  }
+
+  .round-button {
+    text-shadow: none;
+  }
+
+  .buttons-container {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0.5em;
+    padding-left: 5px;
+    padding-right: 5px;
+    .nav-button {
+      @include breakpoint(large) {
+        max-width: 630px;
+      }
+
+      &.colour-1 {
+        a {
+          background-color: #b1d850;
+        }
+      }
+
+      &.colour-2 {
+        padding-left: 0.5em;
+
+        a {
+          background-color: #96d456;
+
+        }
+      }
+
+      &.colour-3 {
+        padding-left: 0.5em;
+
+        a {
+          background-color: #79cc52;
+
+        }
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        /*padding-top: 1em;
+        padding-bottom: 1em;*/
+        height: 3em;
+        color: $white;
+        width: 100%;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 20px;
+        padding-left: 3em;
+        padding-right: 3em;
+        &:after {
+          content: "xxxxxx";
+          color: transparent;
+          //line-height: 3em;
+          display: inline-block;
+          min-width: 1em;
+          background-image: url("../images/arrow-right.png");
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+      }
+
+      &.data-magellan {
+        a {
+          &:after {
+            background-image: url("../images/arrow-down-white.png");
+          }
+        }
+      }
+
+      &.has-icon {
+        a {
+          font-size: 18px;
+          &:before {
+            content: " ";
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            position: absolute;
+          }
+          &:before {
+            width: 38px;
+            left: 10px;
+            top: 5px;
+            bottom: 5px;
+          }
+          @include breakpoint(large) {
+            font-size: 20px;
+            padding-left: 68px;
+            position: relative;
+            &:before {
+              width: 58px;
+              left: 10px;
+              top: 5px;
+              bottom: 5px;
+            }
+          }
+
+        }
+
+        &.icon-House {
+          a {
+            &:before {
+              background-image: url("../images/HFHCH_icons_house-06.svg");
+            }
+          }
+        }
+
+        &.icon-Money {
+          a {
+            &:before {
+              background-image: url("../images/HFHCH_icons_pound.svg");
+            }
+          }
+        }
+
+        &.icon-Magnifying-Glass {
+          a {
+            &:before {
+              background-image: url("../images/HFHCH_icons_magnify.svg");
+            }
+          }
+        }
+
+        &.icon-Stethoscope {
+          a {
+            &:before {
+              background-image: url("../images/stethoscope-icon.png");
+            }
+          }
+        }
+
+        &.icon-Shield {
+          a {
+            &:before {
+              background-image: url("../images/trophy-icon.png");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-heading-image {
+  .image {
+    min-height: 71vw;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    .blue-swoosh {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      img {
+        min-width: 100%;
+      }
+    }
+  }
+  .content {
+    background-color: $mobile-blue;
+    color: $white;
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    position: relative;
+    &:before, &:after {
+      content: "“";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      height: 48px;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    &:after {
+      top: auto;
+      bottom: 0;
+      content: "”";
+    }
+    h1, h2 {
+      display: block;
+      max-width: 9em;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  .link {
+    background-color: $mobile-blue;
+    text-align: center;
+    padding-bottom: 3em;
+  }
+  .the-buttons {
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1;
+      height: 3em;
+      width: 100%;
+      padding-right: 1.5em;
+      padding-left: 1.5em;
+      position: relative;
+      &:after {
+        content: '>';
+        position: absolute;
+        right: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        height: 3em;
+        top: 0;
+      }
+    }
+    .mobile-nav-button {
+      &.colour-1 {
+        a {
+          background-color: #b1d850;
+        }
+      }
+
+      &.colour-2 {
+
+        a {
+          background-color: #96d456;
+
+        }
+      }
+
+      &.colour-3 {
+        a {
+          background-color: #79cc52;
+        }
+      }
+    }
+  }
+}

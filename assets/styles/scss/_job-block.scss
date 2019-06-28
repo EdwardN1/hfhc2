@@ -1,0 +1,59 @@
+.job-block {
+  .mainheading {
+    margin-bottom: 0.5em;
+    //font-size: 24px;
+    color: $blue;
+    @include breakpoint(medium) {
+      font-size: 34px;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 48px;
+    }
+  }
+  .subheading {
+    font-size: 20px;
+    margin-bottom: 0.75em;
+    @include breakpoint(medium) {
+      font-size: 24px;
+    }
+  }
+  .img {
+    min-height: 310px;
+    min-width: 250px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .maincontent {
+    /*font-size: 24px;
+    line-height: 30px;
+    p {
+      font-size: 24px;
+      line-height: 30px;
+    }*/
+  }
+  .joblink {
+    font-size: 18px;
+    padding-bottom: 30px;
+    @include breakpoint(large) {
+      padding-bottom: 0;
+    }
+  }
+  .grid-container {
+    position: relative;
+    .social {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+  .maincontent {
+    max-height: 8.4em;
+    overflow: hidden;
+    margin-bottom: 1em;
+  }
+}

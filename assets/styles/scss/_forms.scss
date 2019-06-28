@@ -1,0 +1,73 @@
+/*
+.contact-us-form {
+  padding-top: 1rem;
+  .gfield {
+    padding-top: 9px;
+  }
+  .gform_fields {
+    .gfield.large-6:nth-child(odd) {
+      padding-right: 0;
+      @include breakpoint(medium) {
+        padding-right: 1rem;
+      }
+
+    }
+  }
+  .gfield_required {
+    color: #790000;
+  }
+  font-size: 16px;
+  line-height: 1.2;
+  @include breakpoint(medium) {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  label {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    @include breakpoint(medium) {
+      font-size: 22px;
+      line-height: 1.2;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 26px;
+      line-height: 1.2;
+    }
+  }
+  li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    background-color: rgba(255,223,224,.25);
+    margin-bottom: 6px!important;
+    border-top: 1px solid #C89797;
+    border-bottom: 1px solid #C89797;
+    padding-bottom: 6px;
+    padding-top: 8px;
+    box-sizing: border-box;
+  }
+  .gfield_error .gfield_label {
+    color: #790000;
+  }
+  .validation_message {
+    color: #790000;
+    font-weight: 700;
+    letter-spacing: normal;
+    font-size: 16px;
+  }
+  div.validation_error {
+    color: #790000;
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-top: 2px solid #790000;
+    border-bottom: 2px solid #790000;
+    padding: 16px 0;
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
+}*/
+

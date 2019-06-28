@@ -1,0 +1,48 @@
+.callout {
+  &.linked {
+    position: relative;
+    &:after {
+      content: " ";
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      background-image: url("../images/Green-Button.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 50%;
+      bottom: -17px;
+      margin-left: -17px;
+    }
+    &.blue-background {
+      &:after {
+        background-image: url("../images/Blue-Button.png");
+      }
+
+    }
+  }
+  h3.quoted {
+    position: relative;
+    &:before {
+      content: " ";
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 33px;
+      height: 27px;
+      background-image: url("../images/left-quote.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &:after {
+      content: " ";
+      top: 0;
+      right: 0;
+      position: absolute;
+      width: 33px;
+      height: 27px;
+      background-image: url("../images/right-quote.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+a.round-button {
+    color: #3c5a69;
+    border: 1px solid #3c5a69;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 1.75em;
+    padding-left: 1em;
+    padding-right: 2em;
+    line-height: 1;
+    position: relative;
+}
+a.round-button:after {
+    content: ">";
+    position: absolute;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 1em;
+    line-height: 1;
+    right: 0;
+    top: 0;
+}
+a.round-button:hover {
+    color: #ffffff;
+    background-color: #45c2df;
+    border: 1px solid #45c2df;
+}

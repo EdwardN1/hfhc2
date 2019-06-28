@@ -1,0 +1,115 @@
+.blog {
+  .main {
+    .blog-background:first-of-type {
+      padding-top: 12px;
+    }
+    .blog-background:last-of-type {
+      padding-bottom: 12px;
+    }
+    @include breakpoint(medium) {
+      .blog-background:first-of-type {
+        padding-top: 24px;
+      }
+      .blog-background:last-of-type {
+        padding-bottom: 24px;
+      }
+    }
+  }
+}
+
+.blog-footer {
+  padding-top: 46px;
+  padding-bottom: 24px;
+}
+
+.blog-background {
+  .quoted {
+    color: $blue;
+   /* position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    &:before {
+      content: " ";
+      width: 17px;
+      height: 14px;
+      position: absolute;
+      background-image: url("../images/left-blue-quote.png");
+      background-size: contain;
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      content: " ";
+      width: 17px;
+      height: 14px;
+      position: absolute;
+      background-image: url("../images/right-blue-quote.png");
+      background-size: contain;
+      top: 0;
+      right: 0;
+    }
+    @include  breakpoint(medium) {
+      padding-left: 48px;
+      padding-right: 48px;
+      &:before {
+        width: 33px;
+        height: 27px;
+      }
+      &:after {
+        width: 33px;
+        height: 27px;
+      }
+    }*/
+  }
+  .img {
+    min-height: 310px;
+    min-width: 250px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .featured-image {
+    padding: 30px;
+    display: none;
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
+  .excerpt-details {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    @include breakpoint(medium) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 15px;
+      padding-left: 0;
+    }
+  }
+  .entry-content {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include breakpoint(medium) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+}
+
+.white-overlay {
+  &.blog {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+68&1+47,0+68 */
+      //background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 27%, rgba(255, 255, 255, 0) 68%); /* FF3.6-15 */
+      //background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 27%, rgba(255, 255, 255, 0) 68%); /* Chrome10-25,Safari5.1-6 */
+      //background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 27%, rgba(255, 255, 255, 0) 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1); /* IE6-9 */
+    h1,h2,p {
+      color: $body-font-color;
+    }
+  }
+}

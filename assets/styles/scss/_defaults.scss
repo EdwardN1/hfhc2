@@ -1,0 +1,777 @@
+//** ========================Visibility========================== **//
+@for $i from 320 through 1440 {
+  .show-above-#{$i} {
+    display: none;
+    visibility: hidden;
+    @include breakpoint($i) {
+      display: block;
+      visibility: visible;
+    }
+
+  }
+  .show-below-#{$i} {
+    display: block;
+    visibility: visible;
+    @include breakpoint($i) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+
+//** ========================Padding========================== **//
+@for $i from 0 through 600 {
+  .pad-left-#{$i} {
+    padding-left: #{$i}px;
+  }
+}
+
+@for $i from 0 through 600 {
+  .pad-right-#{$i} {
+    padding-right: #{$i}px;
+  }
+}
+
+@for $i from 1 through 600 {
+  .pad-top-#{$i} {
+    padding-top: #{$i}px;
+  }
+}
+
+@for $i from 1 through 600 {
+  .pad-bottom-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+}
+
+//** ========================Font Sizes========================== **//
+@for $i from 1 through 200 {
+  .fontsize-#{$i} {
+    font-size: #{$i}px;
+
+    &.addtolinks {
+      a {
+        font-size: #{$i}px;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-small-#{$i} {
+    @include breakpoint(small) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-medium-#{$i} {
+    @include breakpoint(medium) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-large-#{$i} {
+    @include breakpoint(large) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-xlarge-#{$i} {
+    @include breakpoint(xlarge) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 200 {
+  .fontsize-xxlarge-#{$i} {
+    @include breakpoint(xxlarge) {
+      font-size: #{$i}px;
+      &.addtolinks {
+        a {
+          font-size: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+//** ========================Line Heights========================== **//
+
+@for $i from 1 through 9 {
+  .lineheight-0#{$i} {
+    line-height: ($i)/10;
+
+    p {
+      line-height: ($i)/10;
+    }
+
+    ul li {
+      line-height: ($i)/10;
+    }
+  }
+  .lineheight-1#{$i} {
+    line-height: 1 + ($i)/10;
+
+    p {
+      line-height: 1 + ($i)/10;
+    }
+
+    ul li {
+      line-height: 1 + ($i)/10;
+    }
+  }
+  .lineheight-2#{$i} {
+    line-height: 2 + ($i)/10;
+
+    p {
+      line-height: 2 + ($i)/10;
+    }
+
+    ul li {
+      line-height: 2 + ($i)/10;
+    }
+  }
+}
+
+.lineheight-1 {
+  line-height: 1;
+
+  p {
+    line-height: 1;
+  }
+
+  ul li {
+    line-height: 1;
+  }
+}
+
+.lineheight-2 {
+  line-height: 2;
+
+  p {
+    line-height: 2;
+  }
+
+  ul li {
+    line-height: 2;
+  }
+}
+
+.lineheight-3 {
+  line-height: 3;
+
+  p {
+    line-height: 3;
+  }
+
+  ul li {
+    line-height: 3;
+  }
+}
+
+//** ========================Font Transforms========================== **//
+.caps {
+  text-transform: uppercase;
+}
+
+//** ========================Font Weights========================== **//
+.light {
+  font-weight: $font-light;
+}
+
+.regular {
+  font-weight: $font-regular;
+}
+
+.semi-bold {
+  font-weight: $font-semi-bold;
+}
+
+.bold {
+  font-weight: $font-bold;
+}
+
+.weight-black {
+  font-weight: $font-black;
+}
+
+//** ========================Font Colors========================== **//
+.light-grey {
+  color: $light-gray;
+
+  &:hover {
+    color: $light-gray;
+  }
+}
+
+.medium-grey {
+  color: $medium-gray;
+
+  &:hover {
+    color: $medium-gray;
+  }
+}
+
+.dark-grey {
+  color: $dark-gray;
+
+  &:hover {
+    color: $dark-gray;
+  }
+}
+
+.black {
+  color: $black;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.body-colour {
+  color: $body-colour;
+
+  &:hover {
+    color: $body-colour;
+  }
+}
+
+.white {
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.blue {
+  color: $blue;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.red {
+  color: $red;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.green {
+  color: $green;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+.light-green {
+  color: $light-green;
+
+  &:hover {
+    color: $light-green;
+  }
+}
+
+//** ========================Background Colors========================== **//
+.light-grey-background {
+  background-color: $light-gray;
+}
+
+.medium-grey-background {
+  background-color: $medium-gray;
+}
+
+.dark-grey-background {
+  background-color: $dark-gray;
+}
+
+.black-background {
+  background-color: $black;
+}
+
+.body-colour-background {
+  background-color: $body-colour;
+}
+
+.white-background {
+  background-color: $white;
+}
+
+.blue-background {
+  background-color: $blue;
+}
+
+.swoosh-section {
+  .blue-background {
+    background-color: $light-blue;
+    margin-top: -2vw;
+  }
+}
+
+.red-background {
+  background-color: $red;
+}
+
+.green-background {
+  background-color: $green;
+}
+
+.light-green-background {
+  background-color: $light-green;
+}
+
+.light-blue-background {
+  background-color: $light-blue;
+}
+
+.blog-background {
+  background-color: $light-blue;
+}
+
+//** ========================Icons========================== **//
+
+.telephone {
+  padding-left: 1em;
+  position: relative;
+  /*@include breakpoint(920) {
+    padding-left: 40px;
+  }
+  @include breakpoint(large) {
+    padding-left: 60px;
+  }*/
+  /*&:before {
+    content: " ";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-image: url("../images/phone.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    @include breakpoint(920) {
+      width: 34px;
+      display: block;
+    }
+    @include breakpoint(large) {
+      width: 44px;
+      display: block;
+    }
+  }*/
+}
+
+.telephone:first-of-type {
+  padding-left: 0;
+}
+
+//** ========================Display========================== **//
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+//** ========================Links & buttons========================== **//
+
+.arrow-button {
+  /*color: $body-font-color;
+  line-height: 1.5;
+  font-weight: $font-semi-bold;
+  position: relative;
+  padding-right: 65px;
+  &:hover {
+    color: $body-font-color;
+  }
+  &:after {
+    width: 50px;
+    height: 1.5em;
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../images/Blue-Button.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }*/
+
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 1.75em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $white;
+    color: $body-font-color;
+  }
+}
+
+.social-icon {
+  margin-right: 9px;
+  /*img {
+    width: 39px;
+    height: auto;
+  }*/
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: " ";
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+  }
+
+  &.facebook {
+    &:before {
+      background-image: url("../images/facebook_button.svg");
+    }
+
+    &:hover {
+      &:before {
+        background-image: url("../images/facebook_active_button.svg");
+      }
+    }
+  }
+
+  &.twitter {
+    &:before {
+      background-image: url("../images/twitter_button.svg");
+    }
+
+    &:hover {
+      &:before {
+        background-image: url("../images/twitter_active_button.svg");
+      }
+    }
+  }
+
+  &.linkedin {
+    &:before {
+      background-image: url("../images/Linked_in_button.svg");
+    }
+
+    &:hover {
+      &:before {
+        background-image: url("../images/Linked_in_active_button.svg");
+      }
+    }
+  }
+}
+
+//** ========================Gutenberg Columns========================== **//
+
+.wp-block-column {
+  /*margin: 0 20px;*/
+  padding-top: 1rem;
+
+  .grid-container {
+    padding: 0;
+  }
+}
+
+.wp-block-columns {
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  @include breakpoint(xlarge) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include breakpoint(782) {
+    .wp-block-column {
+      border-right: 1px solid $medium-gray;
+    }
+  }
+
+  .wp-block-column:last-of-type {
+    border-right: none;
+  }
+}
+
+.single-post {
+  .wp-block-columns {
+    border-top: 1px solid $body-font-color;
+    border-bottom: 1px solid $body-font-color;
+    @include breakpoint(782) {
+      .wp-block-column {
+        border-right: 1px solid $body-font-color;
+        padding-right: 2em;
+        overflow: hidden;
+        margin-bottom: 0;
+      }
+    }
+    @include breakpoint(xlarge) {
+      padding-left: 246px;
+      padding-right: 246px;
+    }
+
+    .wp-block-column:last-of-type {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+}
+
+//** ========================P tag========================== **//
+
+body, p {
+  font-size: 16px;
+  line-height: 1.4;
+  @include breakpoint(medium) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.reduced-font {
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+    @include breakpoint(medium) {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+  }
+}
+
+.more-letter-spacing {
+  p {
+    letter-spacing: 1px;
+  }
+
+  h1, h2 {
+    letter-spacing: 1px;
+  }
+
+  a {
+    letter-spacing: 1px;
+  }
+}
+
+//** ========================H Tags========================== **//
+h1, h2 {
+  font-size: 22px;
+  @include breakpoint(medium) {
+    font-size: 30px;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 36px;
+  }
+  font-weight: $font-semi-bold;
+  line-height: 1.2;
+
+  &.blue {
+
+    color: $blue;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 900;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    line-height: 1;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 2px;
+      background-color: $blue;
+      left: 0;
+      top: 0.5em;
+    }
+
+    &:after {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 2px;
+      background-color: $blue;
+      right: 0;
+      top: 0.5em;
+    }
+
+  }
+}
+
+.reduced-font {
+  h1, h2 {
+    font-size: 20px;
+    @include breakpoint(medium) {
+      font-size: 28px;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 34px;
+    }
+  }
+}
+
+.light-blue-left-border {
+  padding-left: 1em;
+  position: relative;
+
+  &:after {
+    width: 1px;
+    background-color: $medium-blue;
+    top: 0.5em;
+    bottom: 0.5em;
+    position: absolute;
+    left: 0;
+    opacity: 0.5;
+    content: " ";
+  }
+}
+
+.mobile-show-on-portrait {
+  display: none;
+  visibility: hidden;
+}
+
+.desktop {
+  .show-above-portrait {
+    display: none;
+    visibility: hidden;
+    @include breakpoint(790) {
+      display: block;
+      visibility: visible;
+    }
+  }
+
+  .hide-above-portrait {
+    display: block;
+    visibility: visible;
+    @include breakpoint(790) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .stretch-below-portrait {
+    min-width: 100%;
+    @include breakpoint(790) {
+      min-width: auto;
+    }
+  }
+
+  .show-on-narrow {
+    display: block;
+    visibility: visible;
+    @include breakpoint(580) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .hide-on-narrow {
+    display: none;
+    visibility: hidden;
+    @include breakpoint(580) {
+      display: block;
+      visibility: visible;
+    }
+  }
+
+}
+
+
+.tablet, .mobile {
+  @media screen and (orientation: landscape) {
+    .show-above-portrait {
+      display: none;
+      visibility: hidden;
+    }
+    .hide-above-portrait {
+      display: block;
+      visibility: visible;
+    }
+  }
+  @media screen and (orientation: portrait) {
+    .show-above-portrait {
+      display: none;
+      visibility: hidden;
+    }
+    .hide-above-portrait {
+      display: block;
+      visibility: visible;
+    }
+  }
+}
+
+.mobile {
+  .mobile-hide-on-portrait {
+    @media screen and (orientation: portrait) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .mobile-show-on-portrait {
+    @media screen and (orientation: portrait) {
+      display: block;
+      visibility: visible;
+    }
+  }
+}

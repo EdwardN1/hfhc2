@@ -1,0 +1,337 @@
+.hero-top {
+  background-repeat: no-repeat;
+  background-size: cover;
+  //max-height: 416px;
+  line-height: 1.2;
+  background-position: center center;
+  height: 70vw;
+  font-size: 16px;
+  @include breakpoint(medium) {
+    font-size: 22px;
+    height: 45vw;
+  }
+  @include breakpoint(920) {
+    height: 40vw;
+    background-position: center right;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 16px;
+    color: $white;
+    margin-bottom: 2.5em;
+    @include breakpoint(medium) {
+      font-size: 18px;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 18px;
+      padding-right: 30%;
+    }
+    line-height: 1.25;
+  }
+
+  h1, h2 {
+    font-size: 22px;
+    color: $white;
+    font-weight: normal;
+    line-height: 1.25;
+    letter-spacing: 2px;
+    margin-bottom: 0.75em;
+    font-weight: 900;
+    @include breakpoint(medium) {
+      font-size: 30px;
+    }
+    @include breakpoint(xlarge) {
+      font-size: 40px;
+    }
+  }
+
+  .arrow-button {
+    display: none;
+    @include breakpoint(800) {
+      display: inline-block;
+    }
+  }
+}
+
+.slick-button {
+  //border: 1px solid $white;
+  display: block;
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1;
+  position: relative;
+  margin-top: -60px;
+  color: $white;
+  font-size: 18px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 0.3em;
+  width: 90px;
+  height: 50px;
+  border-radius: 5px;
+  @include breakpoint(medium) {
+    font-size: 18px;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 24px;
+    width: 180px;
+    height: 68px;
+    margin-top: -80px;
+  }
+  @include breakpoint(large) {
+    font-size: 18px;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 24px;
+    width: 320px;
+    height: 68px;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 18px;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 24px;
+    width: 377px;
+    height: 68px;
+  }
+
+  &:hover {
+    color: $white;
+  }
+
+  &:after {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    width: 50px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: " ";
+    background-size: contain;
+    background-image: url("../images/arrow-right.png");
+    display: none;
+    @include breakpoint(large) {
+      display: block;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    width: 58px;
+    top: 4px;
+    left: 1em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: " ";
+    background-size: contain;
+    height: 60px;
+    display: none;
+    @include breakpoint(large) {
+      display: block;
+    }
+  }
+
+  &.Red {
+    background-color: #b1d850;
+    &:before {
+      background-image: url("../images/HFHCH_icons_house-06.svg");
+    }
+  }
+
+  &.Green {
+    background-color: #96d456;
+
+    &:before {
+      background-image: url("../images/HFHCH_icons_magnify.svg");
+    }
+  }
+
+  &.Blue {
+    background-color: #79cc52;
+
+    &:before {
+      background-image: url("../images/HFHCH_icons_pound.svg");
+    }
+  }
+
+  &.people {
+    padding-left: 0;
+    padding-right: 0;
+    //padding-top: 1.5em;
+
+    &:before {
+      background-image: url("../images/people-icon.png");
+    }
+  }
+
+  &.hands {
+    padding-left: 0;
+    padding-right: 0;
+    //padding-top: 1.5em;
+
+    &:before {
+      background-image: url("../images/Hands-Icon.png");
+    }
+  }
+
+  &.medic {
+    padding-left: 0;
+    padding-right: 0;
+
+    //padding-top: 1.5em;
+    &:before {
+      background-image: url("../images/medic-icon.png");
+    }
+  }
+
+  &.stethoscope {
+    padding-left: 0;
+    padding-right: 0;
+
+    //padding-top: 1.5em;
+    &:before {
+      background-image: url("../images/stethoscope-icon.png");
+      height: 50px;
+      top: 8px;
+    }
+  }
+
+  &.trophy {
+    padding-left: 0;
+    padding-right: 0;
+
+    //padding-top: 1.5em;
+    &:before {
+      background-image: url("../images/trophy-icon.png");
+      height: 50px;
+      top: 8px;
+    }
+  }
+
+  &.magnifying-glass {
+    padding-left: 0;
+    padding-right: 0;
+
+    //padding-top: 1.5em;
+    &:before {
+      background-image: url("../images/magnifying-glass-icon.png");
+      width: 64px;
+    }
+  }
+}
+
+.hero-footer {
+  min-height: 160px;
+
+  .hero-footer-content {
+    max-width: 562px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    /*font-size: 24px;*/
+    /*line-height: 1.3;*/
+
+    p {
+      /*font-size: 24px;
+      line-height: 1.3;*/
+    }
+
+    h1,h2 {
+      color: $blue;
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: normal;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      position: relative;
+      padding-left: 1.3em;
+      padding-right: 1.3em;
+      line-height: 1;
+      &:before {
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 1em;
+        height: 2px;
+        background-color: $blue;
+        left: 0;
+        top: 0.5em;
+      }
+      &:after {
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 1em;
+        height: 2px;
+        background-color: $blue;
+        right: 0;
+        top: 0.5em;
+      }
+    }
+  }
+}
+
+.old-overlay {
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 0) 68%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 0) 68%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 0) 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1); /* IE6-9 */
+}
+
+.white-overlay {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+68&1+47,0+68 */
+ /* background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.2) 61%, rgba(255,255,255,0) 76%);
+  background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.2) 61%,rgba(255,255,255,0) 76%);
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.2) 61%,rgba(255,255,255,0) 76%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+  //max-height: 416px;
+  height: 70vw;
+  @include breakpoint(medium) {
+    height: 45vw;
+  }
+  @include breakpoint(920) {
+    height: 30vw;
+    background: none;
+  }
+  padding-top: 18px;*/
+  padding-top: 2vw;
+  @include breakpoint(960) {
+    padding-top: 9vw;
+  }
+  .grid-container {
+    @include breakpoint(medium) {
+      padding-right: 40%;
+    }
+    @include breakpoint(xxlarge) {
+      padding-right: 10%;
+    }
+  }
+}
+
+.blue-overlay {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+68&1+47,0+68 */
+  background: -moz-linear-gradient(left, rgba(241, 252, 255, 1) 0%, rgba(241, 252, 255, 1) 47%, rgba(241, 252, 255, 0) 68%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(241, 252, 255, 1) 0%, rgba(241, 252, 255, 1) 47%, rgba(241, 252, 255, 0) 68%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(241, 252, 255, 1) 0%, rgba(241, 252, 255, 1) 47%, rgba(241, 252, 255, 0) 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1fcff', endColorstr='#00f1fcff', GradientType=1); /* IE6-9 */
+  //max-height: 416px;
+  height: 70vw;
+  @include breakpoint(medium) {
+    height: 45vw;
+  }
+  @include breakpoint(920) {
+    height: 30vw;
+    background: none;
+  }
+  padding-top: 18px;
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="49" viewBox="0 0 42 49">
+  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+    <polygon fill="#FFF" fill-rule="nonzero" points="20.124 46.968 7.62 46.968 7.62 40.704 16.176 40.704 20.124 43.236" opacity=".4"/>
+    <path fill="#FFF" fill-rule="nonzero" d="M31.932,5.796 C31.932,5.796 28.332,25.176 12.732,35.22 C12.732,35.22 1.128,23.316 0.732,8.724 C0.732,8.724 7.488,8.364 12.048,0.384 C12.048,0.384 19.908,6.804 27.648,0.384 C28.5266531,2.56196313 30.0139128,4.44082616 31.932,5.796 L31.932,5.796 Z" opacity=".4"/>
+    <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.46" d="M20.076,42.996 C0.228,26.4 0.636,8.724 0.636,8.724 C0.636,8.724 7.536,8.232 12,0.384 C12,0.384 19.992,7.368 27.6,0.384 C27.6,0.384 31.308,8.076 39.6,8.784 C39.6,8.784 39.996,26.424 20.16,43.056"/>
+    <polyline stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.46" points="22.668 40.764 32.076 40.764 32.076 47.04 7.752 47.04 7.752 40.764 17.016 40.764"/>
+    <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.46" d="M26.6789551 37.116L31.908 37.116M7.86 37.116L13.656 37.116"/>
+  </g>
+</svg>

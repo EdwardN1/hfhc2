@@ -1,0 +1,170 @@
+.header {
+  .top-banner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .semi-bold {
+      font-weight: bold;
+    }
+    .telephone {
+      border-right: 1px solid $white;
+      .semi-bold {
+        font-weight: bold;
+        a {
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+      }
+      &:last-of-type {
+        border-right: none;
+      }
+      a {
+        line-height: 0.8;
+        text-align: left;
+        display: block;
+        width: 100%;
+        font-weight: normal;
+        font-size: 20px;
+        padding-top: 0.2em;
+      }
+      .description {
+        text-align: left;
+        line-height: 0.8;
+        font-size: 20px;
+        padding-bottom: 0.2em;
+      }
+    }
+  }
+  .header-button {
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 1.75em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    &:hover {
+      color: $blue;
+      background-color: $white;
+    }
+  }
+  img.logo {
+    max-width: 221px;
+    @include breakpoint(768) {
+      max-width: 271px;
+    }
+  }
+  #searchbar {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    @include breakpoint(768) {
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
+  }
+  .header-icons {
+    display: none;
+    @include breakpoint(675) {
+      display: flex;
+    }
+  }
+}
+
+.tablet-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .tablet-menu-button {
+    display: inline-block;
+    margin-top: 2em;
+    padding-right: 1em;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    &:after {
+      content: " ";
+      position: absolute;
+      width: 0.7em;
+      top: 0;
+      bottom: 10px;
+      height: 80%;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url("../images/arrow-down-blue.png");
+      background-size: contain;
+    }
+  }
+}
+
+#mobile-header-nav {
+  height: 55px;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  padding-right: 1em;
+  background-color: $white;
+  img {
+    max-height: 45px;
+    width: auto;
+  }
+  .tablet-menu-container {
+    .tablet-menu-button {
+      margin: 0;
+      font-weight: bold;
+      &:after {
+        background-image: url("../images/arrow-up-blue.png");
+      }
+      &[aria-expanded="true"] {
+        &:after {
+          background-image: url("../images/arrow-down-blue.png");
+        }
+      }
+    }
+  }
+}
+
+.mobile-contact {
+  text-align: center;
+  position: relative;
+  &:after {
+    content: " ";
+    position: absolute;
+    background-color: $medium-blue;
+    opacity: 0.5;
+    height: 1px;
+    width: 90%;
+    left: 5%;
+    bottom: 0;
+  }
+  span {
+    line-height: 3;
+    display: inline-block;
+    min-height: 48px;
+    a {
+      line-height: 3;
+      display: inline-block;
+      min-height: 48px;
+    }
+  }
+}
+
+.mobile-request {
+  text-align: center;
+  a {
+    line-height: 3;
+    display: inline-block;
+    min-height: 48px;
+    position: relative;
+    padding-right: 1em;
+    &:after {
+      content: ">";
+      position: absolute;
+      line-height: 3;
+      right: 0;
+      top: 0;
+    }
+  }
+}

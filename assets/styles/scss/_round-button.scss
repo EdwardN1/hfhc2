@@ -1,0 +1,154 @@
+@mixin round-button-reversed() {
+  color: $white;
+  border: 1px solid $white;
+  background-color: $blue;
+  &.clear {
+    background-color: transparent;
+  }
+  &.dark {
+    background-color: transparent;
+    color: $body-font-color;
+    border: 1px solid $body-font-color;
+    &:focus {
+      color: $body-font-color;
+    }
+  }
+  &:focus {
+    color: $white;
+  }
+  &:hover {
+    color: $body-font-color;
+    //border: 1px solid $body-font-color;
+    background: $white;
+  }
+}
+
+@mixin round-button-direction-white-up() {
+  &:after {
+    color: transparent;
+    background-image: url("../images/arrow-up-white.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding-right: 0.2em;
+    right: 0.75em;
+  }
+  &:hover {
+    &:after {
+      background-image: url("../images/arrow-up-blue.png");
+    }
+  }
+}
+
+@mixin round-button-direction-white-down() {
+  &:after {
+    color: transparent;
+    background-image: url("../images/arrow-down-white.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding-right: 0.2em;
+    right: 0.75em;
+  }
+  &:hover {
+    &:after {
+      background-image: url("../images/arrow-down-blue.png");
+    }
+  }
+}
+
+@mixin round-button-direction-blue-up() {
+  &:after {
+    color: transparent;
+    background-image: url("../images/arrow-up-blue.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding-right: 0.2em;
+    right: 0.75em;
+  }
+  &:hover {
+    &:after {
+      background-image: url("../images/arrow-up-white.png");
+    }
+  }
+}
+
+@mixin round-button-direction-blue-down() {
+  &:after {
+    color: transparent;
+    background-image: url("../images/arrow-down-blue.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding-right: 0.2em;
+    right: 0.75em;
+  }
+  &:hover {
+    &:after {
+      background-image: url("../images/arrow-down-blue.png");
+    }
+  }
+}
+
+@mixin round-button($className:"", $arrow:"") {
+  color: $body-font-color;
+  border: 1px solid $body-font-color;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-radius: 1.75em;
+  padding-left: 1em;
+  padding-right: 2em;
+  line-height: 1;
+  position: relative;
+  font-size: $global-font-size;
+  transition: background-color .25s ease-out,color .25s ease-out;
+  &:focus, &:active {
+    outline: none;
+    color: $body-font-color;
+  }
+  &:after {
+    content: ">";
+    position: absolute;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 1em;
+    line-height: 1;
+    right: 0;
+    top: 0;
+  }
+  &:hover {
+    color: $white;
+    background-color: $blue;
+    border: 1px solid $blue;
+  }
+  &.reversed {
+    @include round-button-reversed();
+  }
+  &.direction-white-up {
+    @include round-button-direction-white-up();
+  }
+  &.direction-white-down {
+    @include round-button-direction-white-down();
+  }
+  &.direction-blue-up {
+    @include round-button-direction-blue-up();
+  }
+  &.direction-blue-down {
+    @include round-button-direction-blue-down();
+  }
+  @if $className =='reversed' {
+    @include round-button-reversed;
+  }
+  @if $arrow == 'noarrow' {
+    padding-right: 1em !important;
+    &:after {
+      content: "";
+    }
+  }
+}
+
+.round-button {
+  @include round-button();
+}
+

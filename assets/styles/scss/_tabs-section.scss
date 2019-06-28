@@ -1,0 +1,337 @@
+.accordion-section {
+  margin-top: 0.1em;
+  li.accordion-item {
+    > a {
+      color: $white;
+      font-size: $global-font-size;
+      text-align: center;
+      padding-left: 3em;
+      padding-right: 3em;
+    }
+    &.colour-1 {
+      > a {
+        background-color: #b1d850;
+      }
+    }
+    &.colour-2 {
+      > a {
+        background-color: #96d456;
+      }
+    }
+    &.colour-3 {
+      > a {
+        background-color: #79cc52;
+      }
+    }
+    &.colour-4 {
+      > a {
+        background-color: #51c07f;
+
+      }
+    }
+    .accordion-content {
+      background-color: $light-blue;
+    }
+  }
+  .accordion-title {
+    &:before {
+      content: " ";
+      top: 0;
+      bottom: 0;
+      margin: 0;
+      width: 2em;
+      background-image: url("../images/arrow-down-white.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  .is-active {
+    .accordion-title {
+      &:before {
+        background-image: url("../images/arrow-up-white.png");
+      }
+    }
+  }
+}
+.tabs-section {
+  background-color: $light-blue;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: relative;
+ /* margin-top: 2.5em;
+  margin-bottom: 2.5em;*/
+  margin-top: 5.4vw;
+  margin-bottom: 5.4vw;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: -4.5vw;
+    height: 7.431vw;
+    width: 100%;
+    content: " ";
+    background-image: url("../images/swoosh_top.png");
+    background-size: cover;
+    z-index: 1;
+    //outline: 1px solid red;
+  }
+
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: -4.5vw;
+    height: 7.431vw;
+    width: 100%;
+    content: " ";
+    background-image: url("../images/lower_swoosh.png");
+    background-size: cover;
+    z-index: 1;
+    //outline: 1px solid red;
+  }
+
+  @include breakpoint(1100) {
+    /*margin-top: 2.8em;
+    margin-bottom: 2.8em;*/
+    &:before {
+      top: -4.6vw;
+    }
+    &:after {
+      bottom: -4.6vw;
+    }
+  }
+  @include breakpoint(1200) {
+    &:before {
+      top: -4.85vw;
+    }
+    &:after {
+      bottom: -4.85vw;
+    }
+  }
+  @include breakpoint(1300) {
+    &:before {
+      top: -4.9vw;
+    }
+    &:after {
+      bottom: -4.9vw;
+    }
+  }
+  @include breakpoint(1400) {
+    &:before {
+      top: -5.05vw;
+    }
+    &:after {
+      bottom: -5.05vw;
+    }
+  }
+  @include breakpoint(1500) {
+    margin-top: 6.1vw;
+    margin-bottom: 6.1vw;
+    &:before {
+      top: -5.28vw;
+    }
+    &:after {
+      bottom: -5.28vw;
+    }
+  }
+  @include breakpoint(1640) {
+    /*margin-top: 3em;
+    margin-bottom: 3em;*/
+    &:before {
+      top: -5.4vw;
+    }
+    &:after {
+      bottom: -5.4vw;
+    }
+  }
+  @include breakpoint(1770) {
+    &:before {
+      top: -5.51vw;
+    }
+    &:after {
+      bottom: -5.51vw;
+    }
+  }
+  @include breakpoint(1900) {
+   /* margin-top: 4em;
+    margin-bottom: 4em;*/
+    &:before {
+      top: -5.54vw;
+    }
+    &:after {
+      bottom: -5.54vw;
+    }
+  }
+  @include breakpoint(2150) {
+    /*margin-top: 5em;
+    margin-bottom: 5em;*/
+    &:before {
+      top: -5.62vw;
+    }
+    &:after {
+      bottom: -5.62vw;
+    }
+  }
+  @include breakpoint(2400) {
+    /*margin-top: 6em;
+    margin-bottom: 6em;*/
+    &:before {
+      top: -5.643vw;
+    }
+    &:after {
+      bottom: -5.643vw;
+    }
+  }
+  @include breakpoint(2700) {
+    /*margin-top: 7em;
+    margin-bottom: 7em;*/
+    &:before {
+      top: -5.71vw;
+    }
+    &:after {
+      bottom: -5.71vw;
+    }
+  }
+  @include breakpoint(3000) {
+    /*margin-top: 8em;
+    margin-bottom: 8em;*/
+    &:before {
+      top: -5.767vw;
+    }
+    &:after {
+      bottom: -5.767vw;
+    }
+  }
+  @include breakpoint(3640) {
+    /*margin-top: 9em;
+    margin-bottom: 9em;*/
+    &:before {
+      top: -5.84vw;
+    }
+    &:after {
+      bottom: -5.84vw;
+    }
+  }
+  @include breakpoint(3800) {
+    /*margin-top: 10em;
+    margin-bottom: 10em;*/
+    &:before {
+      top: -5.835vw;
+    }
+    &:after {
+      bottom: -5.835vw;
+    }
+  }
+
+  .tab-layout {
+    max-width: 1640px;
+  }
+
+  .tabs {
+    border: none;
+    background-color: $light-blue;
+
+    .tabs-title {
+      padding-top: 5px;
+      background-color: transparent;
+
+      a {
+        font-size: $global-font-size;
+        color: $body-colour;
+        font-weight: bold;
+        /*padding: 1.75em 4.861vw;*/
+        padding-left: 4.861vw;
+        position: relative;
+        line-height: 1;
+        background-color: $white;
+        height: 4.5em;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        @include breakpoint(large) {
+          padding-left: 1.861vw;
+          font-size: 85%;
+        }
+        @include breakpoint(xlarge) {
+          padding-left: 3.861vw;
+        }
+        @include breakpoint(xxlarge) {
+          padding-left: 3.5em;
+          font-size: $global-font-size;
+        }
+
+        &:after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          content: " ";
+          width: 0;
+          height: 0;
+          border-top: 2.25em solid $light-blue;
+          border-bottom: 2.25em solid $light-blue;
+          border-left: 2.25em solid $white;
+        }
+      }
+
+      &.is-active {
+        a {
+          background-color: $medium-blue;
+
+          &:after {
+            border-left: 2.25em solid $medium-blue;
+          }
+        }
+      }
+    }
+
+    .tabs-title:last-of-type {
+      padding-bottom: 5px;
+      position: relative;
+
+      /*&:after {
+        position: absolute;
+        content: " ";
+        width: 85%;
+        height: 60px;
+        background-color: $white;
+        left: 0;
+        bottom: -55px;
+      }
+
+      &.is-active {
+        &:after {
+          background-color: $medium-blue;
+        }
+      }*/
+    }
+
+    .tabs-title:first-of-type {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: " ";
+        width: 85%;
+        height: 60px;
+        background-color: $white;
+        left: 0;
+        top: -55px;
+      }
+
+      &.is-active {
+        &:before {
+          background-color: $medium-blue;
+        }
+      }
+    }
+
+  }
+
+  .tabs-content {
+    background-color: $light-blue;
+    border: none;
+    max-width: 680px;
+    padding-left: 3.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}

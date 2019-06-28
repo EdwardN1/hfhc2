@@ -1,0 +1,168 @@
+.cta-section {
+  padding-bottom: 1em;
+  padding-left: map_get($grid-column-gutter,small);
+  padding-right: map_get($grid-column-gutter,small);
+  @include breakpoint(medium) {
+    padding-left: map_get($grid-column-gutter,medium);
+    padding-right: map_get($grid-column-gutter,medium);
+  }
+  @include breakpoint(860) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.half-blue {
+    background: linear-gradient(to bottom, $white 50%, $light-blue 50%);
+  }
+  a.action {
+    background-color: $light-pink;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid $pink;
+    max-width: 996px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $body-font-color;
+    .image {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 50vw;
+      @include breakpoint(810) {
+        min-height: 179px;
+      }
+    }
+    .description {
+      padding: 1.5em;
+      position: relative;
+      .read-more {
+        text-transform: uppercase;
+      }
+      .heading {
+        font-size: 24px;
+        font-weight: bold;
+        @include breakpoint(medium) {
+          font-size: 36px;
+        }
+        line-height: 1;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
+      &:after {
+        content: " ";
+        position: absolute;
+        width: 3em;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        background-image: url("../images/arrow-right-blue.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+}
+
+.cta-footer {
+  &.half-blue {
+    background-color: $light-blue;
+  }
+  h1,h2 {
+    color: $blue;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    position: relative;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    line-height: 1;
+    &:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 2px;
+      background-color: $blue;
+      left: 0;
+      top: 2em;
+    }
+    &:after {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 2px;
+      background-color: $blue;
+      right: 0;
+      top: 2em;
+    }
+  }
+}
+
+.cta-header {
+  h1,h2 {
+    color: $blue;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    line-height: 1;
+    &:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 2px;
+      background-color: $blue;
+      left: 0;
+      top: 0.5em;
+    }
+    &:after {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 2px;
+      background-color: $blue;
+      right: 0;
+      top: 0.5em;
+    }
+  }
+  .content-container-1 {
+    overflow: hidden;
+  }
+  .content-container-2 {
+    padding-left: 2em;
+    border-left: 1px solid $body-font-color;
+    padding-bottom: 8em;
+    position: relative;
+    .cta-btn {
+      position: absolute;
+      left: -23px;
+      bottom: 68px;
+      img {
+        max-width: 47px;
+      }
+    }
+    /*&:before {
+      content: " ";
+      position: absolute;
+      height: 8em;
+      width: 46px;
+      background-size: contain;
+      left: -23px;
+      bottom: 0;
+      background-image: url("../images/arrow-down-circled.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }*/
+  }
+}

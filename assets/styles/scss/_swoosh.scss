@@ -1,0 +1,52 @@
+hr.swoosh-right {
+  max-width: 100%;
+  width: 100%;
+  height: 11.389vw;
+  background-image: url("../images/Swoosh_divider.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  margin: 0;
+
+  @include breakpoint(medium) {
+    margin-top: -2em;
+  }
+  @include breakpoint(large) {
+    margin-top: -3em;
+  }
+  @include breakpoint(xlarge) {
+    margin-top: -4em;
+  }
+  &.clear {
+    background-image: url("../images/Swoosh_divider-clear.png");
+  }
+}
+
+hr.swoosh-left {
+  max-width: 100%;
+  width: 100%;
+  height: 11.389vw;
+  background-image: url("../images/Swoosh_divider-footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  margin: 0;
+  margin-bottom: -1px;
+
+  //margin-bottom: -2em;
+  &.clear {
+    background-image: url("../images/Swoosh_divider-footer-clear.png");
+  }
+}
+
+hr.swoosh-left-blue {
+  max-width: 100%;
+  width: 100%;
+  height: 11.389vw;
+  background-image: url("../images/Swoosh_divider-footer-blue.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  margin: 0;
+  //margin-bottom: -2em;
+}

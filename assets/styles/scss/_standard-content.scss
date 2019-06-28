@@ -1,0 +1,210 @@
+.standard-content {
+  max-width: 562px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 0.1em;
+  /*outline: 1px solid red;*/
+  @include breakpoint(large) {
+    padding-bottom: 2em;
+  }
+  @include breakpoint(xlarge) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  @include breakpoint(3000) {
+    padding-bottom: 6rem;
+  }
+  &.no-top-gutter {
+    padding-top: 0;
+  }
+  &.no-bottom-gutter {
+    padding-bottom: 0;
+  }
+  > p:last-child {
+    margin-bottom: 0;
+    .round-button {
+      display: inline-block;
+      margin-bottom: 3em;
+    }
+  }
+
+  &.full-width {
+    max-width: 768px;
+  }
+
+  h1,h2 {
+    color: $blue;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    line-height: 1;
+    &:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 2px;
+      background-color: $blue;
+      left: 0;
+      top: 0.5em;
+    }
+    &:after {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 2px;
+      background-color: $blue;
+      right: 0;
+      top: 0.5em;
+    }
+  }
+}
+
+.single-post {
+  .standard-content {
+    h1, h2 {
+      display: block;
+      margin-left: 0;
+      padding: 0;
+      line-height: 1.2;
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.wp-block-column {
+  .standard-content {
+    padding: 0;
+  }
+}
+
+.buttons-container {
+  /*position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0.5em;*/
+  .light-blue-background {
+    background: linear-gradient(180deg, $light-blue 50%, $white 0);
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: $blue;
+      top: 50%;
+      left: 0;
+    }
+    z-index: 1;
+  }
+  .grid-container {
+    padding: 0;
+    @include breakpoint(large) {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+    }
+  }
+  .nav-button {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    &.colour-1 {
+      a {
+        background-color: #b1d850;
+      }
+    }
+    &.colour-2 {
+      a {
+        background-color: #96d456;
+      }
+    }
+    &.colour-3 {
+      a {
+        background-color: #79cc52;
+      }
+    }
+    &.colour-4 {
+      a {
+        background-color: #51c07f;
+
+      }
+    }
+
+    @include breakpoint(large) {
+      max-width: 630px;
+      &.colour-2 {
+        padding-left: 0.5em;
+      }
+      &.colour-3 {
+        padding-left: 0.5em;
+      }
+      &.colour-4 {
+        padding-left: 0.5em;
+      }
+    }
+
+    a {
+      display: block;
+      line-height: 1;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      color: $white;
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      position: relative;
+      &:after {
+        display: block;
+        position: absolute;
+        background-image: url("../images/arrow-right.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 2em;
+        content: " ";
+        top: 0;
+        bottom: 0;
+        right: 0;
+      }
+      @include breakpoint(large) {
+        border-radius: 4px;
+        &:after {
+          content: "mm";
+          color: transparent;
+          //line-height: 1em;
+          display: inline-block;
+          position: relative;
+          /*min-width: 1em;*/
+          background-image: url("../images/arrow-right.png");
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+      }
+
+    }
+    &.data-magellan {
+      a {
+        &:after {
+          background-image: url("../images/arrow-down-white.png");
+        }
+      }
+    }
+  }
+}
