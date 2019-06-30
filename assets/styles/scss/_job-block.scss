@@ -28,17 +28,24 @@
       width: auto;
     }
   }
-  .maincontent {
-    /*font-size: 24px;
-    line-height: 30px;
-    p {
-      font-size: 24px;
-      line-height: 30px;
-    }*/
-  }
   .joblink {
-    font-size: 18px;
+    font-size: 16px;
     padding-bottom: 30px;
+    .round-button {
+      padding-right: 1em;
+      &:after {
+        display: none;
+      }
+    }
+    @include breakpoint(540) {
+      font-size: 18px;
+      .round-button {
+        padding-right: 2em;
+        &:after {
+          display: block;
+        }
+      }
+    }
     @include breakpoint(large) {
       padding-bottom: 0;
     }
@@ -48,12 +55,34 @@
     .social {
       position: absolute;
       right: 15px;
-      bottom: 15px;
+      bottom: 5px;
+      @include breakpoint(540) {
+        bottom: 15px;
+      }
     }
   }
   .maincontent {
     max-height: 8.4em;
     overflow: hidden;
     margin-bottom: 1em;
+  }
+  .jobimage {
+    display: none;
+    visibility: hidden;
+    @include breakpoint(840) {
+      display: block;
+      visibility: visible;
+    }
+  }
+  .jobdescription {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include breakpoint(840) {
+      width: 66.66667%;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
   }
 }
