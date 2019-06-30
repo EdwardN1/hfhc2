@@ -199,6 +199,20 @@
             }
           }
         }
+        &.icon-Person {
+          a {
+            &:before {
+              background-image: url("../images/HFHCH1901_icon_Careers_with_us.svg");
+            }
+          }
+        }
+        &.icon-People {
+          a {
+            &:before {
+              background-image: url("../images/HFHCH1901_icon_job_roles.svg");
+            }
+          }
+        }
       }
     }
   }

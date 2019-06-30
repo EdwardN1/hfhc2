@@ -108,6 +108,12 @@ if ($shadow) {
                         if ($icon == 'Shield') {
                             $iconClass = ' has-icon icon-Shield';
                         }
+	                    if ($icon == 'Person') {
+		                    $iconClass = ' has-icon icon-Person';
+	                    }
+	                    if ($icon == 'People') {
+		                    $iconClass = ' has-icon icon-People';
+	                    }
                         if ($link_type == 'Navigation Target' && $navigation_target_id != '#') {
                             $datamagellan = ' data-magellan';
                             $link = $navigation_target_id;
