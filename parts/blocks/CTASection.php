@@ -89,7 +89,7 @@ if ($add_footer) {
                 <div class="grid-x">
                     <?php while (have_rows('columns')) : the_row(); ?>
                         <?php $content = get_sub_field('content'); ?>
-                        <div class="cell auto">
+                        <div class="cell large-auto medium-12 small-12">
                             <?php echo $content; ?>
                         </div>
                     <?php endwhile; ?>
