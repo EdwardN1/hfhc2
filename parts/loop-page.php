@@ -8,6 +8,11 @@ $headerClass = ' grid-container';
 if($full_width_title) {
     $headerClass = '';
 }
+$animated_forms = get_field('animated_forms');
+$animatedFormsClass = ' no_animated_forms';
+if($animated_forms) {
+    $animatedFormsClass = ' animated_forms';
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
@@ -16,7 +21,7 @@ if($full_width_title) {
 		<h1 class="page-title"><?php /*the_title(); */?></h1>
 	</header> --><!-- end article header -->
 					
-    <section class="entry-content" itemprop="text">
+    <section class="entry-content<?php echo $animatedFormsClass;?>" itemprop="text">
 	    <?php the_content(); ?>
 	</section> <!-- end article section -->
 						
