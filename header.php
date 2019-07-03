@@ -61,15 +61,18 @@ global $deviceType;
             <div class="blue-background white mobile-show-on-portrait show-on-narrow">
                 <div class="mobile-contact">
                     <span>Home Care Enquires: </span> <span style="font-weight: bold;"><a
-                                href="tel:<?php echo preg_replace('/\s+/', '', $home_care_enquiries_number) ?>" class="white"><?php echo $home_care_enquiries_number; ?></a></span>
+                                href="tel:<?php echo preg_replace('/\s+/', '', $home_care_enquiries_number) ?>"
+                                class="white"><?php echo $home_care_enquiries_number; ?></a></span>
                 </div>
                 <div class="mobile-contact">
                     <span>Looking for Staff: </span> <span style="font-weight: bold;"><a
-                                href="tel:<?php echo preg_replace('/\s+/', '', $looking_for_staff_number) ?>" class="white"><?php echo $looking_for_staff_number; ?></a></span>
+                                href="tel:<?php echo preg_replace('/\s+/', '', $looking_for_staff_number) ?>"
+                                class="white"><?php echo $looking_for_staff_number; ?></a></span>
                 </div>
                 <div class="mobile-contact">
                     <span>Want to Work for Us: </span> <span style="font-weight: bold;"><a
-                                href="tel:<?php echo preg_replace('/\s+/', '', $want_to_work_for_us_number) ?>" class="white"><?php echo $want_to_work_for_us_number; ?></a></span>
+                                href="tel:<?php echo preg_replace('/\s+/', '', $want_to_work_for_us_number) ?>"
+                                class="white"><?php echo $want_to_work_for_us_number; ?></a></span>
                 </div>
                 <div class="mobile-request">
                     <a href="<?php the_field('request_a_call_back', 'option'); ?>"
@@ -108,8 +111,18 @@ global $deviceType;
                             <div class="grid-x header-icons">
                                 <div class="cell auto"></div>
                                 <div class="shrink cell pad-right-10 pad-top-5 show-above-portrait">
-                                    <a href="<?php the_field('request_a_call_back', 'option'); ?>"
-                                       class="header-button">Request a call</a>
+                                    <a href="<?php //the_field('request_a_call_back', 'option'); ?>#"
+                                       class="header-button" data-open="call-back-form">Request a call</a>
+                                    <div id="call-back-form" class="reveal" data-reveal>
+                                        <div class="grid-container">
+                                            <div class="grid-x">
+                                            <h3 class="white">Request a call</h3>
+                                            </div>
+                                        </div>
+                                        <div class="animated_forms">
+                                            <?php gravity_form(4, false, false, false, '', false); ?>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="shrink cell pad-right-10 pad-left-10 pad-top-5 show-for-large">
                                     <a href="<?php the_field('vacancies', 'option'); ?>"

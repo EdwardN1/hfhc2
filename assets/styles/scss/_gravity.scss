@@ -4,10 +4,26 @@
     color: $white;
     letter-spacing: 1px;
 
+
     .gform_heading, .gform_body, .gform_footer, .validation_error {
       @include xy-grid-container;
+      max-width: 66.6666667%;
+      @media (min-width: 576px) {
+        max-width: 540px;
+      }
+      @media (min-width: 992px) {
+        max-width: 960px;
+      }
+      @media (min-width: 768px) {
+        max-width: 720px;
+      }
+      @media (min-width: 1200px) {
+        //max-width: 1140px;
+      }
+
     }
   }
+
   .gform_heading {
     padding-top: 2em;
     padding-bottom: 2em;
@@ -25,6 +41,7 @@
       padding-right: 1.3em;
       line-height: 1;
       font-size: 40px;
+
       &:before {
         content: " ";
         position: absolute;
@@ -59,6 +76,132 @@
     display: block;
   }
 
+  .gfield_label {
+    color: $white;
+    font-size: 20px;
+    transition: font-size 0.3s cubic-bezier(0.28, 0.84, 0.42, 1);;
+  }
+
+  .ginput_container {
+    border-top: 1px solid $white;
+
+    input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+      padding: 0;
+    }
+
+    input[type="text"], input[type="text"].medium {
+      height: 0;
+      width: 0;
+      padding: 0;
+      border: 1px solid $blue;
+      border-radius: 0;
+      box-shadow: none;
+      transition: height 0.3s cubic-bezier(0.28, 0.84, 0.42, 1);
+
+      &:focus {
+        border: 1px solid $black;
+      }
+    }
+
+    select, select.medium {
+      height: 0;
+      width: 0;
+      padding: 0;
+      border: 1px solid $blue;
+      border-radius: 0;
+      box-shadow: none;
+      transition: height 0.3s cubic-bezier(0.28, 0.84, 0.42, 1);
+      //background-image: url("../images/arrow-down-circled.png");
+      background-position: right center;
+
+      &:focus {
+        border: 1px solid $black;
+      }
+    }
+
+    textarea, textarea.medium {
+      height: 0;
+      width: 0;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      transition: height 0.3s cubic-bezier(0.28, 0.84, 0.42, 1);
+
+      &:focus {
+        border: 1px solid $black;
+      }
+    }
+  }
+
+  .dataFocused, .dataEntered, .gfield_error {
+    .ginput_container {
+      border: none;
+
+      input[type="text"],input[type="text"].medium {
+        height: 2.4375rem;
+        width: 100%;
+        padding: 0.5rem;
+      }
+
+      select, select.medium {
+        height: 2.4375rem;
+        width: 100%;
+        padding: 0.5rem;
+      }
+
+      textarea, textarea.medium {
+        height: 10rem;
+        width: 100%;
+        padding: 0.5rem;
+      }
+    }
+
+    .gfield_label {
+      font-size: 14px;
+    }
+  }
+
+  .gfield_error {
+    input[type="text"] {
+      border: 1px solid $red;
+    }
+
+    select {
+      border: 1px solid $red;
+    }
+
+    textarea {
+      border: 1px solid $red;
+    }
+  }
+
+  .validation_error {
+    color: $red;
+  }
+
+  .button {
+    @include round-button(reversed);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    display: block;
+  }
+
+  /*.dataEntered {
+    .ginput_container {
+      input[type="text"] {
+        height: 2.4375rem;
+        width: 100%;
+        padding: 0.5rem;
+      }
+      textarea {
+        height: 10rem;
+        width: 100%;
+        padding: 0.5rem;
+      }
+    }
+  }*/
 }
 
 
@@ -67,11 +210,14 @@
     background-color: $blue;
     color: $white;
     letter-spacing: 1px;
-
+    margin-bottom: 0;
     .gform_heading, .gform_body, .gform_footer, .validation_error {
       @include xy-grid-container;
     }
-
+    .gform_page_footer {
+      margin-bottom: 0;
+      border-top: 1px solid $white;
+    }
     &.swoosh-top_wrapper {
       margin-top: 11.389vw;
       position: relative;
@@ -160,6 +306,7 @@
 
       .button {
         @include round-button(reversed, noarrow);
+        display: inline-block;
         //padding-right: 1em;
       }
     }
@@ -184,5 +331,52 @@
       margin-bottom: 0.5em;
       padding-top: 0.5em;
     }
+
+    .ginput_container {
+      select {
+        background-position: 96% center;
+      }
+      table.gfield_list {
+        tbody, tfoot, thead {
+          background-color: $blue;
+          color: $white;
+          [type=color], [type=date], [type=datetime-local], [type=datetime], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], textarea {
+            margin: 0;
+          }
+        }
+        tbody tr:nth-child(2n) {
+          background-color: $blue;
+        }
+      }
+    }
+
+    .gf_progressbar_wrapper {
+      @include xy-grid-container;
+    }
+
+    .gf_progressbar_percentage.percentbar_0 span {
+      color: $white;
+      line-height: 1.5;
+    }
+
+    ul.gfield_checkbox li label, ul.gfield_radio li label {
+      color: $white;
+    }
+
+    .gfield_checkbox li input, .gfield_checkbox li input[type=checkbox], .gfield_radio li input[type=radio] {
+      margin-top: 1em;
+    }
+    .button, .gform_save_link {
+      @include round-button(reversed);
+      margin-bottom: 0;
+      display: inline-block;
+    }
+    hr {
+      border-bottom: 1px solid $white;
+    }
+
+  }
+  .gform_confirmation_wrapper {
+    @include xy-grid-container;
   }
 }
