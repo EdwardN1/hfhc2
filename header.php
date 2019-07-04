@@ -60,7 +60,7 @@ global $deviceType;
             ?>
             <div class="blue-background white mobile-show-on-portrait show-on-narrow">
                 <div class="mobile-contact">
-                    <span>Home Care Enquires: </span> <span style="font-weight: bold;"><a
+                    <span>Home Care Enquiries: </span> <span style="font-weight: bold;"><a
                                 href="tel:<?php echo preg_replace('/\s+/', '', $home_care_enquiries_number) ?>"
                                 class="white"><?php echo $home_care_enquiries_number; ?></a></span>
                 </div>
@@ -85,7 +85,7 @@ global $deviceType;
                         <div class="cell large-7 medium-9 stretch-below-portrait">
                             <div class="grid-x">
                                 <div class="telephone cell large-4 medium-auto small-4">
-                                    <div class="description">Home Care Enquires</div>
+                                    <div class="description">Home Care Enquiries</div>
 
                                     <div class="semi-bold"><a
                                                 href="tel:<?php echo preg_replace('/\s+/', '', $home_care_enquiries_number) ?>"
