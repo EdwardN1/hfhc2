@@ -116,7 +116,10 @@ global $deviceType;
                                     <div id="call-back-form" class="reveal" data-reveal>
                                         <div class="grid-container">
                                             <div class="grid-x">
-                                            <h3 class="white">Request a call</h3>
+                                                <div class="cell auto"><h3 class="white">Request a call</h3></div>
+                                                <div class="cell shrink">
+                                                    <a class="close-form" data-close aria-label="Close modal">Close </a>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="animated_forms">

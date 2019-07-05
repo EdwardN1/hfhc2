@@ -46,6 +46,9 @@
       color: $blue;
       background-color: $white;
     }
+    &:focus {
+      outline: none;
+    }
   }
   img.logo {
     max-width: 221px;

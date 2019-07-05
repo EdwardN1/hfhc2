@@ -5,4 +5,20 @@
 #call-back-form {
   background-color: $blue;
   border-radius: 10px;
+  .close-form {
+    color: $white;
+    font-size: 1em;
+    line-height: 1;
+    position: relative;
+    padding-right: 1.5em;
+    display: block;
+    line-height: 2.25em;
+    &:after {
+      content: "X";
+      position: absolute;
+      font-size: 1.75em;
+      top: 0;
+      right: 0;
+    }
+  }
 }
