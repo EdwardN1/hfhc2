@@ -123,7 +123,7 @@ global $deviceType;
                                             </div>
                                         </div>
                                         <div class="animated_forms">
-                                            <?php gravity_form(4, false, false, false, '', false); ?>
+                                            <?php gravity_form(4, false, false, false, '', true); ?>
                                         </div>
                                     </div>
                                 </div>

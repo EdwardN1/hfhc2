@@ -1,5 +1,5 @@
 .animated_forms {
-  .gform_wrapper {
+  .gform_wrapper, .gform_confirmation_wrapper {
     background-color: $blue;
     color: $white;
     letter-spacing: 1px;
@@ -24,7 +24,7 @@
     }
   }
 
-  .gform_heading {
+  .gform_heading, .gform_confirmation_wrapper {
     padding-top: 2em;
     padding-bottom: 2em;
 
@@ -64,6 +64,10 @@
         top: 0.5em;
       }
     }
+  }
+
+  .gform_confirmation_wrapper {
+
   }
 
   .gform_description {
