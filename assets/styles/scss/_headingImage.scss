@@ -251,7 +251,7 @@
     padding-bottom: 3em;
     position: relative;
     &:before, &:after {
-      content: "“";
+      content: "";
       position: absolute;
       top: 10px;
       left: 0;
@@ -265,7 +265,8 @@
     &:after {
       top: auto;
       bottom: 0;
-      content: "”";
+
+      content: "";
     }
     h1, h2 {
       display: block;
