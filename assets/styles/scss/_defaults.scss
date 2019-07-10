@@ -612,8 +612,8 @@ body, p {
 
 //** ========================H Tags========================== **//
 h1, h2 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 22px;
+  line-height: 30px;
   font-weight: $font-semi-bold;
   @include breakpoint(768) {
     font-size: 44px;
