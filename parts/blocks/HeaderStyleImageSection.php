@@ -168,12 +168,14 @@ if ($shadow) {
             <?php $link_type = get_field('link_type'); ?>
 
             <?php $bdatamagellan = ''; ?>
+	        <?php $bdirectiondown = ''; ?>
             <?php
             $bLink = '';
             if ($link_type == 'Navigation Target') {
                 $navigation_target_id = '#' . get_field('navigation_target_id');
                 $bLink = $navigation_target_id;
                 $bdatamagellan = ' data-magellan';
+                $bdirectiondown = ' direction-white-down';
             }
             if ($link_type == 'Url') {
                 $bLink = $url;
@@ -190,7 +192,7 @@ if ($shadow) {
                 }
                 ?>
                 <div<?php echo $bdatamagellan; ?>><a href="<?php echo $bLink; ?>"
-                                                     class="round-button reversed clear"><?php echo $link_text; ?></a>
+                                                     class="round-button reversed clear<?php echo $bdirectiondown;?>"><?php echo $link_text; ?></a>
                 </div>
                 <?php
             }
