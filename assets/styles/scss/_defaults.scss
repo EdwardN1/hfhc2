@@ -612,16 +612,13 @@ body, p {
 
 //** ========================H Tags========================== **//
 h1, h2 {
-  font-size: 22px;
-  @include breakpoint(medium) {
-    font-size: 30px;
-  }
-  @include breakpoint(xlarge) {
-    font-size: 36px;
-  }
+  font-size: 18px;
+  line-height: 24px;
   font-weight: $font-semi-bold;
-  line-height: 1.2;
-
+  @include breakpoint(768) {
+    font-size: 44px;
+    line-height: 56px;
+  }
   &.blue {
 
     color: $blue;
