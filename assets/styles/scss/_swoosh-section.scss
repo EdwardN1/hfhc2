@@ -92,7 +92,8 @@
     position: relative;
     min-height: 70vw;
     @include breakpoint(xlarge) {
-      min-height: 60vw;
+      /*min-height: 60vw;*/
+      min-height: auto;
     }
 
 

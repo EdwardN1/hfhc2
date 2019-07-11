@@ -20,7 +20,7 @@ if($demo_transparent_top) {
 if($image_position=='Right'):?>
 
 <div class="swoosh-section image-right<?php echo $debugClass; ?>">
-    <div class="grid-x align-middle <?php echo $background_colour; ?>">
+    <div class="grid-x <?php echo $background_colour; ?>">
         <div class="large-6 medium-12 small-12 left">
             <div class="<?php echo $descriptionClass;?>">
                 <?php echo $content; ?>
@@ -35,7 +35,7 @@ if($image_position=='Right'):?>
 <?php else:?>
 
 <div class="swoosh-section image-left<?php echo $debugClass; ?>">
-    <div class="grid-x align-middle <?php echo $background_colour; ?>">
+    <div class="grid-x <?php echo $background_colour; ?>">
         <div class="large-6 medium-12 small-12 left">
             <div class="image" style="background-image: url(<?php echo $imageURL; ?>)"></div>
         </div>
