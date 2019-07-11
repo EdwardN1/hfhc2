@@ -104,6 +104,17 @@
         }
       }
     }
+    #footer-links {
+      li {
+        display: block;
+        width: 100%;
+        @include breakpoint(900) {
+          display: list-item;
+          width: auto;
+        }
+      }
+
+    }
     /*.contact, .logo, .icon-section {
       position: relative;
       p {
