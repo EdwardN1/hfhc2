@@ -523,18 +523,27 @@
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
+  .wp-block-column {
+    @include breakpoint(600) {
+      flex-basis: 100%;
+      flex-grow: 1;
+    }
+    @include breakpoint(768) {
+      border-right: 1px solid $medium-gray;
+      padding-right: 1em;
+      flex-basis: calc(50% - 16px);
+      flex-grow: 0;
+    }
+  }
   @include breakpoint(xlarge) {
     padding-left: 0;
     padding-right: 0;
   }
-  @include breakpoint(782) {
-    .wp-block-column {
-      border-right: 1px solid $medium-gray;
-    }
-  }
+
 
   .wp-block-column:last-of-type {
     border-right: none;
+    padding-right: 0;
   }
 }
 
