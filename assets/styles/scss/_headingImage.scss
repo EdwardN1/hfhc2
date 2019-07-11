@@ -302,6 +302,25 @@
         height: 3em;
         top: 0;
       }
+      &.direction-down {
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+      &:focus {
+        outline: none;
+      }
+      &.white {
+        &:active {
+          color: $white;
+        }
+        &:focus {
+          color: $white;
+        }
+        &:visited {
+          color: $white;
+        }
+      }
     }
     .mobile-nav-button {
       &.colour-1 {

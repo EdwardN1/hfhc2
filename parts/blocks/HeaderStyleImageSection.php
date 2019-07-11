@@ -210,10 +210,12 @@ if ($shadow) {
             <?php $pagepost = get_sub_field('pagepost'); ?>
             <?php
             $link = '';
+            $linkClass = '';
 
             if ($link_type == 'Navigation Target' && $navigation_target_id != '#') {
                 $datamagellan = ' data-magellan';
                 $link = $navigation_target_id;
+                $linkClass = ' direction-down';
             }
             if ($link_type == 'Url' && $url != '') {
                 $link = $url;
@@ -226,7 +228,7 @@ if ($shadow) {
                 ?>
 
                 <div class="mobile-nav-button colour-<?php echo $button_count . $datamagellan; ?>"<?php echo $datamagellan; ?>>
-                    <a href="<?php echo $link; ?>"<?php echo $target; ?> class="white"><?php echo $button_text; ?></a>
+                    <a href="<?php echo $link; ?>"<?php echo $target; ?> class="white<?php echo $linkClass;?>"><?php echo $button_text; ?></a>
                 </div>
 
             <?php } ?>
