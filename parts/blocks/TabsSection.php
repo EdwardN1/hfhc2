@@ -38,7 +38,7 @@
         </div>
     <?php endif; ?>
     <div class="accordion-section hide-for-large">
-    <ul class="accordion" data-accordion>
+    <ul class="accordion" data-accordion data-allow-all-closed="true">
         <?php
         $accordionActiveTab = ' is-active';
         $colorCount = 1;
