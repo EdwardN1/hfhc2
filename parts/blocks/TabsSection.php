@@ -13,7 +13,7 @@
                             <?php $heading = get_sub_field('heading'); ?>
                             <li class="tabs-title<?php echo $activeTab; ?>"><a
                                         href="#panel-<?php echo $tabID; ?>-<?php echo $tabCountTab; ?>"
-                                        aria-selected="true"><?php echo $heading; ?></a></li>
+                                        aria-selected="true"><span class="big-right-arrow"></span><span class="heading-text"><?php echo $heading; ?></span></a></li>
                             <?php $tabCountTab++; ?>
                             <?php $activeTab = ''; ?>
                         <?php endwhile; ?>

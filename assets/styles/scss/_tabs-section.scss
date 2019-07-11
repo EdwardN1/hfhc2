@@ -249,18 +249,21 @@
         flex-direction: column;
         @include breakpoint(large) {
           padding-left: 1.861vw;
+          /*padding-right: 1.861vw;*/
           font-size: 85%;
         }
         @include breakpoint(xlarge) {
           padding-left: 3.861vw;
+          /*padding-right: 3.861vw;*/
         }
         @include breakpoint(xxlarge) {
           padding-left: 3.5em;
+          /*padding-right: 3.5em;*/
           font-size: $global-font-size;
         }
 
         &:after {
-          position: absolute;
+          /*position: absolute;
           top: 0;
           right: 0;
           content: " ";
@@ -268,17 +271,38 @@
           height: 0;
           border-top: 2.25em solid $light-blue;
           border-bottom: 2.25em solid $light-blue;
-          border-left: 2.25em solid $white;
+          border-left: 2.25em solid $white;*/
         }
+      }
+
+      span.big-right-arrow {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 2.25em solid $light-blue;
+        border-bottom: 2.25em solid $light-blue;
+        border-left: 2.25em solid $white;
+      }
+
+      span.heading-text {
+        position: relative;
+        z-index: 1;
       }
 
       &.is-active {
         a {
           background-color: $medium-blue;
 
-          &:after {
+          span.big-right-arrow {
             border-left: 2.25em solid $medium-blue;
           }
+
+          /*&:after {
+            border-left: 2.25em solid $medium-blue;
+          }*/
         }
       }
     }
