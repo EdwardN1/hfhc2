@@ -151,6 +151,12 @@ if (is_front_page() && is_home()) {
 
 <?php wp_footer(); ?>
 
+<?php
+$google_analytics = get_field('google_analytics','option');
+if($google_analytics) {
+    echo $google_analytics;
+}
+?>
 </body>
 
 </html> <!-- end page -->
