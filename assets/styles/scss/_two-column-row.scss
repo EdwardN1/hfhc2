@@ -9,7 +9,7 @@
     max-width: 39em;
     padding-left: 1em;
     padding-right: 1em;
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       padding: 0;
     }
   }
@@ -33,7 +33,7 @@
       }
     }
     .content-container {
-      @include breakpoint(large) {
+      @include breakpoint(medium) {
         margin-left: auto;
         margin-right: 0;
         padding-right: 3em;
@@ -50,7 +50,7 @@
       }
     }
     .content-container {
-      @include breakpoint(large) {
+      @include breakpoint(medium) {
         margin-left: 0;
         margin-right: auto;
         padding-left: 3em;
@@ -62,7 +62,7 @@
 
   &.blue-decoration {
     position: relative;
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       margin-bottom: 7.431vw;
       &:after {
         position: absolute;
@@ -88,7 +88,7 @@
   }
   &.red-decoration {
     position: relative;
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       margin-bottom: 9.5vw;
       &:after {
         position: absolute;
@@ -113,7 +113,7 @@
   }
   &.green-decoration {
     position: relative;
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       margin-bottom: 7.431vw;
       &:after {
         position: absolute;
