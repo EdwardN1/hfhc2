@@ -75,9 +75,10 @@ global $deviceType;
                                 class="white"><?php echo $want_to_work_for_us_number; ?></a></span>
                 </div>
                 <div class="mobile-request">
-                    <a href="<?php the_field('request_a_call_back', 'option'); ?>"
-                       class="white">Request a call</a>
+                    <a href="<?php //the_field('request_a_call_back', 'option'); ?>#"
+                       class="white" data-open="call-back-form">Request a call</a>
                 </div>
+
             </div>
             <div class="blue-background white top-banner mobile-hide-on-portrait hide-on-narrow">
                 <div class="grid-container">
@@ -116,9 +117,9 @@ global $deviceType;
                                     <div id="call-back-form" class="reveal" data-reveal>
                                         <div class="grid-container">
                                             <div class="grid-x">
-                                                <div class="cell auto"><h3 class="white">Request a call</h3></div>
+                                                <div class="cell auto"><div class="grid-container form-header-container"><h3 class="white">Request a call</h3></div></div>
                                                 <div class="cell shrink">
-                                                    <a class="close-form" data-close aria-label="Close modal">Close </a>
+                                                    <div class="grid-container form-header-container"><a class="close-form" data-close aria-label="Close modal">Close </a></div>
                                                 </div>
                                             </div>
                                         </div>

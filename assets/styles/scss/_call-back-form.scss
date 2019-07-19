@@ -4,15 +4,21 @@
 
 #call-back-form {
   background-color: $blue;
-  border-radius: 10px;
+  border-radius: 0;
+  @include breakpoint(670) {
+    border-radius: 10px;
+
+  }
   h3 {
-    font-size: 32px;
+    font-size: 28px;
+    @include breakpoint(340) {
+      font-size: 32px;
+    }
 
   }
   .close-form {
     color: $white;
     font-size: 1em;
-    line-height: 1;
     position: relative;
     padding-right: 1.5em;
     display: block;
@@ -24,5 +30,8 @@
       top: 0;
       right: 0;
     }
+  }
+  .animated_forms .gform_wrapper .gform_body {
+    max-width: none;
   }
 }
